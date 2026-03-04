@@ -3,7 +3,7 @@
 Before starting the analysis, the working environment was configured to ensure data integrity and performance.
 
 ### Key Actions:
-- **Database Setup**: Created a PostgreSQL database named `the_look_ecommerce`.
+- **Database Setup**: Created a PostgreSQL database named `ecommerce_project`.
 - **Data Modeling**: Defined schemas for 4 main tables (`users`, `products`, `orders`, `order_items`) using optimized data types:
   - `NUMERIC` for financial accuracy in prices and costs.
   - `TIMESTAMP` for time-series analysis.
