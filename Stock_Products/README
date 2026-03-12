@@ -1,1 +1,23 @@
+ Inventory & Product Analysis
+Comprehensive analysis of product performance, category-level profitability, and supplier quality control.
 
+📈 Key Scripts
+05_category_profitability.sql: In-depth look at net profit and margins across 26 product categories.
+
+06_top_selling_products.sql: Identification of "Star" products by sales volume and their contribution to total profit.
+
+07_high_risk_brands.sql: Precision analysis of brand return rates, filtering out technical cancellations for accurate quality auditing.
+
+💡 Business Insights
+High-Margin Efficiency: Identified that while Outerwear & Coats leads in total profit ($183,017), categories like Suits & Sport Coats offer superior efficiency with a nearly 60% profit margin.
+
+Star Product Performance: The "The North Face Apex Bionic" jacket emerged as a key revenue driver, leading both in sales volume (8 units) and total profit ($3,719).
+
+Supplier Quality Risks: Pinpointed high-risk brands such as Vintage and Glamourmom, which exhibit return rates exceeding 30%, signalling potential sizing or quality issues.
+
+⚙️ Technical Approach
+Profit Calculation: Leveraged real-time price-to-cost differentials (sale_price - cost) to monitor net earnings.
+
+Status Filtering: Applied strict oi.status = 'Complete' filters for profitability to ensure only realized revenue is reported.
+
+Advanced Rate Logic: Used NULLIF() and specific status inclusions (Shipped, Delivered, Returned) to create a reliable denominator for Return Rate calculations, avoiding "divide-by-zero" errors and data inflation from cancelled orders.
