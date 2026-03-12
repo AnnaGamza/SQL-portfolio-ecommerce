@@ -4,7 +4,7 @@
 */
 
 SELECT 
-    p.category,
+    p.category
     , ROUND(SUM(oi.sale_price) - SUM(p.cost), 2) AS total_profit
     , ROUND((SUM(oi.sale_price) - SUM(p.cost)) / SUM(oi.sale_price) * 100, 2) AS profit_margin_pct
 FROM products p 
